@@ -1,282 +1,50 @@
-name: Build Android ARM64 APK
+name: Auto Build ARM64
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ main ]
 
 jobs:
-  build:
+  activate-and-build:
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout repository
+    - name: Checkout
       uses: actions/checkout@v4
-      with:
-        lfs: true
 
     - name: Free disk space
       run: |
-        sudo rm -rf /usr/share/dotnet
-        sudo rm -rf /opt/ghc
-        sudo rm -rf "/usr/local/share/boost"
-        sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+        sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/share/boost "$AGENT_TOOLSDIRECTORY"
         df -h
 
-    - name: Setup Unity Project
-      run: |
-        # Ensure proper Unity project structure
-        mkdir -p Assets/Scripts
-        mkdir -p Assets/Plugins/Android/arm64-v8a
-        mkdir -p Assets/Plugins/Android/armeabi-v7a
-        mkdir -p Assets/Resources
-        mkdir -p Assets/Scenes
-        mkdir -p ProjectSettings
-        
-        # Copy decompiled scripts
-        if [ -d "Assets/Scripts" ]; then
-          echo "Scripts directory exists"
-          ls Assets/Scripts/*.cs | head -5
-        fi
-        
-        # Copy native libraries
-        if [ -d "lib/armeabi-v7a" ]; then
-          cp lib/armeabi-v7a/*.so Assets/Plugins/Android/armeabi-v7a/
-          echo "Copied armeabi-v7a libraries"
-        fi
-        
-        # Create empty arm64 libs (placeholder)
-        touch Assets/Plugins/Android/arm64-v8a/.gitkeep
-        
-        # Create minimal ProjectSettings if not exists
-        if [ ! -f "ProjectSettings/ProjectSettings.asset" ]; then
-          cat > ProjectSettings/ProjectSettings.asset << 'EOF'
-        %YAML 1.1
-        %TAG !u! tag:unity3d.com,2011:
-        --- !u!129 &1
-        PlayerSettings:
-          productName: Undead Slayer Xiahoudun
-          companyName: NHN Corp
-          defaultScreenWidth: 1920
-          defaultScreenHeight: 1080
-          bundleVersion: 3.5.0
-          AndroidBundleVersionCode: 1
-          AndroidMinSdkVersion: 22
-          AndroidTargetSdkVersion: 33
-          AndroidPreferredInstallLocation: 1
-          aotOptions:
-          stripEngineCode: 1
-          iPhoneSdkVersion: 988
-          iPhoneTargetOSVersionString: 12.0
-          iPhoneScriptCallOptimization: 0
-          ForceInternetPermission: 0
-          ForceSDCardPermission: 0
-          CreateWallpaper: 0
-          APKExpansionFiles: 0
-          keepLoadedShadersAlive: 0
-          StripUnusedMeshComponents: 1
-          strictShaderVariantMatching: 0
-          VertexChannelCompressionMask: 4054
-          iPhoneStrippingLevel: 0
-          iPhoneArchitecture: 2
-          appleDeveloperTeamID:
-          iOSManualSigningProvisioningProfileID:
-          tvOSManualSigningProvisioningProfileID:
-          iOSManualSigningProvisioningProfileType: 0
-          tvOSManualSigningProvisioningProfileType: 0
-          appleEnableAutomaticSigning: 0
-          iOSRequireARKit: 0
-          iOSAutomaticallyDetectAndAddCapabilities: 1
-          appleEnableProMotion: 0
-          shaderPrecisionModel: 0
-          clonedFromGUID: e036f44c54c94f4a8b9c0d1e2f3a4b5c
-          templatePackageId:
-          templateDefaultScene:
-          useCustomMainManifest: 0
-          useCustomLauncherManifest: 0
-          useCustomMainGradleTemplate: 0
-          useCustomLauncherGradleTemplate: 0
-          useCustomBaseGradleTemplate: 0
-          useCustomGradlePropertiesTemplate: 0
-          useCustomProguardFile: 0
-          AndroidTargetArchitectures: 3
-          AndroidTargetDevices: 0
-          AndroidSplashScreenScale: 0
-          androidSplashScreen: {fileID: 0}
-          AndroidKeystoreName:
-          AndroidKeyaliasName:
-          AndroidBuildApkPerCpuArchitecture: 0
-          AndroidBuildSystem: 1
-          androidUseCustomKeystore: 0
-          m_AndroidApplicationEntry: 1
-          m_BuildScriptsOnly: 0
-          m_SaveArtifactsOutsideOfProject: 0
-          AndroidMinifyRelease: 0
-          AndroidMinifyDebug: 0
-          AndroidValidateAppBundleSize: 1
-          AndroidAppBundleSizeToValidate: 150
-          m_BuildTargetIcons: []
-          m_BuildTargetPlatformIcons: []
-          m_BuildTargetBatching: []
-          m_BuildTargetShaderSettings: []
-          m_BuildTargetGraphicsJobs:
-          - m_BuildTarget: MacStandaloneSupport
-            m_GraphicsJobs: 0
-          - m_BuildTarget: Switch
-            m_GraphicsJobs: 1
-          - m_BuildTarget: WindowsStandaloneSupport
-            m_GraphicsJobs: 1
-          m_BuildTargetGraphicsJobMode: []
-          m_BuildTargetGraphicsAPIs:
-          - m_BuildTarget: AndroidPlayer
-            m_APIs: 150000000b000000
-            m_Automatic: 0
-          - m_BuildTarget: iOSSupport
-            m_APIs: 10000000
-            m_Automatic: 1
-          openGLRequireES31: 0
-          openGLRequireES31AEP: 0
-          openGLRequireES32: 0
-          m_TemplateCustomTags: {}
-          mobileMTRendering:
-            Android: 1
-            iPhone: 1
-            tvOS: 1
-          vulkanNumSwapchainBuffers: 3
-          vulkanEnableSetSRGBWrite: 0
-          vulkanEnablePreTransform: 0
-          vulkanEnableLateAcquireNextImage: 0
-          vulkanEnableCommandBufferRecycling: 1
-          m_ColorGamuts: 00000000
-          targetPixelDensity: 30
-          resolutionScalingMode: 0
-          resetResolutionOnWindowResize: 0
-          androidSupportedAspectRatio: 1
-          androidMaxAspectRatio: 2.1
-          applicationIdentifier:
-            Android: com.nhncorp.skundeadck
-            iPhone: com.nhncorp.skundeadck
-          buildNumber:
-            Standalone: 0
-            iPhone: 0
-            tvOS: 0
-          overrideDefaultApplicationIdentifier: 1
-          AndroidBundleVersionCode: 1
-          AndroidMinSdkVersion: 22
-          AndroidTargetSdkVersion: 33
-          AndroidPreferredInstallLocation: 1
-          aotOptions:
-          stripEngineCode: 1
-          iPhoneSdkVersion: 988
-          iPhoneTargetOSVersionString: 12.0
-          iPhoneScriptCallOptimization: 0
-          ForceInternetPermission: 0
-          ForceSDCardPermission: 0
-          CreateWallpaper: 0
-          APKExpansionFiles: 0
-          keepLoadedShadersAlive: 0
-          StripUnusedMeshComponents: 1
-          strictShaderVariantMatching: 0
-          VertexChannelCompressionMask: 4054
-          iPhoneStrippingLevel: 0
-          iPhoneArchitecture: 2
-          appleDeveloperTeamID:
-          iOSManualSigningProvisioningProfileID:
-          tvOSManualSigningProvisioningProfileID:
-          iOSManualSigningProvisioningProfileType: 0
-          tvOSManualSigningProvisioningProfileType: 0
-          appleEnableAutomaticSigning: 0
-          iOSRequireARKit: 0
-          iOSAutomaticallyDetectAndAddCapabilities: 1
-          appleEnableProMotion: 0
-          shaderPrecisionModel: 0
-          clonedFromGUID: e036f44c54c94f4a8b9c0d1e2f3a4b5c
-          templatePackageId:
-          templateDefaultScene:
-          useCustomMainManifest: 0
-          useCustomLauncherManifest: 0
-          useCustomMainGradleTemplate: 0
-          useCustomLauncherGradleTemplate: 0
-          useCustomBaseGradleTemplate: 0
-          useCustomGradlePropertiesTemplate: 0
-          useCustomProguardFile: 0
-          AndroidTargetArchitectures: 3
-          AndroidTargetDevices: 0
-          AndroidSplashScreenScale: 0
-          androidSplashScreen: {fileID: 0}
-          AndroidKeystoreName:
-          AndroidKeyaliasName:
-          AndroidBuildApkPerCpuArchitecture: 0
-          AndroidBuildSystem: 1
-          androidUseCustomKeystore: 0
-          m_AndroidApplicationEntry: 1
-          m_BuildScriptsOnly: 0
-          m_SaveArtifactsOutsideOfProject: 0
-          AndroidMinifyRelease: 0
-          AndroidMinifyDebug: 0
-          AndroidValidateAppBundleSize: 1
-          AndroidAppBundleSizeToValidate: 150
-          m_BuildTargetIcons: []
-          m_BuildTargetPlatformIcons: []
-          m_BuildTargetBatching: []
-          m_BuildTargetShaderSettings: []
-          m_BuildTargetGraphicsJobs:
-          - m_BuildTarget: MacStandaloneSupport
-            m_GraphicsJobs: 0
-          - m_BuildTarget: Switch
-            m_GraphicsJobs: 1
-          - m_BuildTarget: WindowsStandaloneSupport
-            m_GraphicsJobs: 1
-          m_BuildTargetGraphicsJobMode: []
-          m_BuildTargetGraphicsAPIs:
-          - m_BuildTarget: AndroidPlayer
-            m_APIs: 150000000b000000
-            m_Automatic: 0
-          - m_BuildTarget: iOSSupport
-            m_APIs: 10000000
-            m_Automatic: 1
-          openGLRequireES31: 0
-          openGLRequireES31AEP: 0
-          openGLRequireES32: 0
-          m_TemplateCustomTags: {}
-          mobileMTRendering:
-            Android: 1
-            iPhone: 1
-            tvOS: 1
-          vulkanNumSwapchainBuffers: 3
-          vulkanEnableSetSRGBWrite: 0
-          vulkanEnablePreTransform: 0
-          vulkanEnableLateAcquireNextImage: 0
-          vulkanEnableCommandBufferRecycling: 1
-          m_ColorGamuts: 00000000
-          targetPixelDensity: 30
-          resolutionScalingMode: 0
-          resetResolutionOnWindowResize: 0
-          androidSupportedAspectRatio: 1
-          androidMaxAspectRatio: 2.1
-        EOF
-          echo "Created ProjectSettings"
-        fi
-        
-        echo "Project structure ready"
-        ls -la
+    - name: Request activation file
+      id: activation
+      uses: game-ci/unity-request-activation-file@v2
+      with:
+        unityVersion: 2022.3.20f1
 
-    - name: Build Android APK
+    - name: Upload .alf file
+      uses: actions/upload-artifact@v4
+      with:
+        name: unity-activation-file
+        path: ${{ steps.activation.outputs.filePath }}
+
+    - name: Activate Unity (Personal)
+      if: ${{ secrets.UNITY_LICENSE != '' }}
+      uses: game-ci/unity-activate@v2
+      with:
+        unityVersion: 2022.3.20f1
+
+    - name: Build Android ARM64
+      if: ${{ secrets.UNITY_LICENSE != '' }}
       uses: game-ci/unity-builder@v4
       env:
         UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-        UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-        UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
       with:
         targetPlatform: Android
-        androidAppBundle: false
-        buildMethod: ''
-        versioning: Custom
-        version: 3.5.0-arm64
+        unityVersion: 2022.3.20f1
 
-    - name: Upload APK Artifact
+    - name: Upload APK
+      if: ${{ secrets.UNITY_LICENSE != '' }}
       uses: actions/upload-artifact@v4
       with:
         name: UndeadSlayer-arm64
         path: build/Android/Android.apk
-        retention-days: 30
