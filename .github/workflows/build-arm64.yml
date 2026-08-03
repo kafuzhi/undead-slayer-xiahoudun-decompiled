@@ -1,0 +1,85 @@
+name: Build ARM64 APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Free disk space
+      run: |
+        sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/share/boost "$AGENT_TOOLSDIRECTORY"
+        docker image prune -a -f
+        df -h
+
+    - name: Prepare project structure
+      run: |
+        mkdir -p UnityProject/Assets/Scripts
+        mkdir -p UnityProject/Assets/Plugins/Android/arm64-v8a
+        mkdir -p UnityProject/Assets/Plugins/Android/armeabi-v7a
+        mkdir -p UnityProject/Assets/Resources
+        mkdir -p UnityProject/Assets/Scenes
+        mkdir -p UnityProject/ProjectSettings
+
+        # Copy decompiled scripts
+        cp -r Assets/Scripts/* UnityProject/Assets/Scripts/ 2>/dev/null || true
+
+        # Copy resources
+        cp -r Assets/Resources/* UnityProject/Assets/Resources/ 2>/dev/null || true
+
+        # Copy native libs
+        cp lib/armeabi-v7a/*.so UnityProject/Assets/Plugins/Android/armeabi-v7a/ 2>/dev/null || true
+
+        # Create minimal scene
+        cat > UnityProject/Assets/Scenes/SampleScene.unity << 'SCENE'
+        %YAML 1.1
+        %TAG !u! tag:unity3d.com,2011:
+        --- !u!29 &1
+        OcclusionCullingSettings:
+          m_ObjectHideFlags: 0
+        SCENE
+
+        # Create ProjectSettings
+        cat > UnityProject/ProjectSettings/ProjectSettings.asset << 'SETTINGS'
+        %YAML 1.1
+        %TAG !u! tag:unity3d.com,2011:
+        --- !u!129 &1
+        PlayerSettings:
+          productName: Undead Slayer Xiahoudun
+          companyName: NHN Corp
+          defaultScreenWidth: 1920
+          defaultScreenHeight: 1080
+          bundleVersion: 3.5.0
+          AndroidBundleVersionCode: 1
+          AndroidMinSdkVersion: 22
+          AndroidTargetSdkVersion: 33
+          AndroidTargetArchitectures: 3
+          applicationIdentifier:
+            Android: com.nhncorp.skundeadck
+          scriptingBackend:
+            Android: 1
+          il2cppCompilerConfiguration:
+            Android: 2
+        SETTINGS
+
+        echo "Project structure ready"
+        find UnityProject -type f | wc -l
+
+    - name: Build with GameCI
+      uses: game-ci/unity-builder@v4
+      env:
+        UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+      with:
+        targetPlatform: Android
+        projectPath: UnityProject
+        unityVersion: 2022.3.20f1
+
+    - name: Upload APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: UndeadSlayer-arm64
+        path: build/Android/*.apk
