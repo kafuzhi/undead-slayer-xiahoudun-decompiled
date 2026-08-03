@@ -1,0 +1,23 @@
+name: Get Unity Activation File
+
+on:
+  workflow_dispatch:
+
+jobs:
+  get-alf:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get activation file from Docker
+      run: |
+        docker pull unityci/editor:ubuntu-2022.3.20f1-android-3
+        docker run --rm -v $(pwd):/output -w /output unityci/editor:ubuntu-2022.3.20f1-android-3 \
+          bash -c "/opt/unity/Editor/Unity -batchmode -nographics -createManualActivationFile -logFile /dev/stdout 2>&1 || true"
+        find . -name "*.alf" -ls
+        ls -la *.alf 2>/dev/null || echo "No .alf file found"
+
+    - name: Upload .alf file
+      uses: actions/upload-artifact@v4
+      with:
+        name: Unity_Activation_File
+        path: "*.alf"
+        retention-days: 90
