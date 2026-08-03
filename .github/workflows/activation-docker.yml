@@ -10,49 +10,40 @@ jobs:
     - name: Generate .alf file using Docker
       run: |
         # Try different image tags
-        for tag in "2022.3.20f1-android-3" "2022.3.20f1-android" "2022.3.20f1-base-3" "2022.3.20f1-base"; do
-          echo "Trying unityci/editor:ubuntu-$tag..."
-          if docker pull "unityci/editor:ubuntu-$tag" 2>/dev/null; then
-            echo "Found image: unityci/editor:ubuntu-$tag"
-            IMAGE_TAG="ubuntu-$tag"
+        IMAGE=""
+        for tag in \
+          "unityci/editor:ubuntu-2022.3.20f1-android-3" \
+          "unityci/editor:ubuntu-2022.3.20f1-android" \
+          "unityci/editor:ubuntu-2022.3.20f1-base-3" \
+          "unityci/editor:ubuntu-2022.3.20f1-base" \
+          "ghcr.io/game-ci/editor:2022.3.20f1-android-3" \
+          "ghcr.io/game-ci/editor:2022.3.20f1-android" \
+          "ghcr.io/game-ci/editor:2022.3.20f1-base-3" \
+          "ghcr.io/game-ci/editor:2022.3.20f1-base"; do
+          echo "Trying $tag..."
+          if docker pull "$tag" 2>&1; then
+            echo "SUCCESS: $tag"
+            IMAGE="$tag"
             break
           fi
         done
         
-        if [ -z "$IMAGE_TAG" ]; then
-          echo "No valid image found, trying ghcr.io..."
-          for tag in "2022.3.20f1-android-3" "2022.3.20f1-android" "2022.3.20f1-base-3" "2022.3.20f1-base"; do
-            echo "Trying ghcr.io/game-ci/editor:$tag..."
-            if docker pull "ghcr.io/game-ci/editor:$tag" 2>/dev/null; then
-              echo "Found image: ghcr.io/game-ci/editor:$tag"
-              IMAGE_TAG="ghcr.io/game-ci/editor:$tag"
-              break
-            fi
-          done
-        fi
-        
-        if [ -z "$IMAGE_TAG" ]; then
+        if [ -z "$IMAGE" ]; then
           echo "ERROR: No Unity Docker image found"
           exit 1
         fi
         
-        # Create activation script
-        cat > activate.sh << 'SCRIPT'
-        #!/bin/bash
-        unity -batchmode -nographics -createManualActivationFile -logFile /dev/stdout
-        SCRIPT
-        chmod +x activate.sh
-        
-        # Run in Docker
+        # Run activation in Docker
         docker run --rm \
           -v $(pwd):/output \
           -w /output \
-          $IMAGE_TAG \
-          bash /output/activate.sh
+          "$IMAGE" \
+          bash -c "unity -batchmode -nographics -createManualActivationFile -logFile /dev/stdout 2>&1 || true; find /output -name '*.alf' -ls"
         
         # Find the .alf file
-        find . -name "*.alf" -type f
-        ls -la *.alf 2>/dev/null || echo "No .alf file found"
+        echo "Looking for .alf files..."
+        find . -name "*.alf" -type f -ls
+        ls -la *.alf 2>/dev/null || echo "No .alf file found in current dir"
 
     - name: Upload .alf file
       uses: actions/upload-artifact@v4
