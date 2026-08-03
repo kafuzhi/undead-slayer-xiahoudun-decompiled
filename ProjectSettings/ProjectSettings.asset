@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!129 &1
+PlayerSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 22
+  productGUID: e036f44c54c94f4a8b9c0d1e2f3a4b5c
+  AndroidProfiler: 0
+  AndroidFilterTouchesWhenObscured: 0
+  AndroidEnableHWStatistics: 0
+  defaultScreenWidth: 1920
+  defaultScreenHeight: 1080
+  defaultScreenWidthWeb: 960
+  defaultScreenHeightWeb: 600
+  m_StereoRenderingPath: 0
+  activeColorSpace: 1
+  MTRendering: 1
+  companyName: NHN Corp
+  productName: Undead Slayer Xiahou Dun
+  defaultCursor: {fileID: 0}
+  cursorHotspot: {x: 0, y: 0}
+  m_ShowUnitySplashScreen: 1
+  m_ShowUnitySplashLogo: 1
+  m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
+  m_SplashScreenBackgroundLandscape: {fileID: 0}
+  m_SplashScreenBackgroundPortrait: {fileID: 0}
+  runInBackground: 0
+  defaultIsNativeResolution: 1
+  useOnDemandResources: 0
+  accelerometerFrequency: 60
+  muteOtherAudioSources: 0
+  defaultOrientation: 4
+  allowedAutorotateToPortrait: 0
+  allowedAutorotateToPortraitUpsideDown: 0
+  allowedAutorotateToLandscapeRight: 1
+  allowedAutorotateToLandscapeLeft: 1
+  useOSAutorotation: 1
+  use32BitDisplayBuffer: 1
+  preserveFramebufferAlpha: 0
+  disableDepthAndStencilBuffers: 0
+  androidStartInFullscreen: 1
+  androidRenderOutsideSafeArea: 1
+  androidUseSwappy: 0
+  androidBlitType: 0
+  androidMinimumWindowWidth: 400
+  androidMinimumWindowHeight: 300
+  androidFullscreenMode: 1
+  defaultIsFullScreen: 1
+  m_SupportedAspectRatios:
+    4:3: 1
+    5:4: 1
+    16:10: 1
+    16:9: 1
+    Others: 1
+  bundleVersion: 3.5.0
+  preloadedAssets: []
+  metroInputSource: 0
+  wsaTransparentSwapchain: 0
+  m_HolographicPauseOnTrackingLoss: 1
+  xboxOneDisableKinectGpuReservation: 1
+  xboxOneEnable7thCore: 1
+  vrEditorSettings: {}
+  cloudServicesEnabled: {}
+  luminIcon:
+    m_Name:
+    m_ModelFolderPath:
+    m_PortalFolderPath:
+  luminCert:
+    m_CertPath:
+    m_PrivateKeyPath:
+  luminIsChannelApp: 0
+  luminVersion:
+    m_VersionCode: 1
+    m_VersionName:
+  apiCompatibilityLevel: 2
+  activeInputHandler: 0
+  cloudProjectId:
+  framebufferDepthMemorylessMode: 0
+  qualitySettingsNames: []
+  projectGenerationRootNamespace:
+  projectGenerationPlayerPackages: 1
+  EditorAssemblies: []
+  additionalIl2CppArgs:
+  scriptingRuntimeVersion: 0
+  gcIncremental: 1
+  gcWBarrierValidation: 0
+  apiCompatibilityLevel: 6
+  activeInputHandler: 0
+  windowsGamepadBackendHint: 0
+  targetDevice: 2

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="23" android:compileSdkVersionCodename="6.0-2438415" package="com.nhncorp.skundeadck" platformBuildVersionCode="23" platformBuildVersionName="6.0-2438415">
+    <uses-feature android:glEsVersion="0x00020000"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-feature android:name="android.hardware.sensor.accelerometer"/>
+    <uses-feature android:name="android.hardware.touchscreen"/>
+    <uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false"/>
+    <application android:icon="@drawable/icon" android:label="@string/app_name" android:name="com.nhncorp.skundeadck.WlssApplication" android:theme="@style/AppTheme">
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/app_name" android:name=".Game" android:screenOrientation="landscape" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <meta-data android:name="unityplayer.UnityActivity" android:value="true"/>
+            <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="false"/>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/app_name" android:name="com.nhncorp.skundeadck.SplashActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <service android:enabled="true" android:exported="true" android:name="com.cocos.push.service.CCPushService" android:process=":cocos.push.service">
+            <intent-filter>
+                <action android:name="cocos.push.service"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="wlss_channel" android:value="channel:000013"/>
+        <meta-data android:name="wlss_name" android:value="CMM"/>
+        <meta-data android:name="bi_coco_aid" android:value="409284066"/>
+        <meta-data android:name="bi_coco_cid" android:value="13"/>
+        <meta-data android:name="redeemAppid" android:value="appid:100068"/>
+        <meta-data android:name="flurryAppid" android:value="845W64S96NQRWRTGNBRV"/>
+        <meta-data android:name="clientInstallKey" android:value="appid:100068"/>
+        <service android:exported="true" android:name="mm.purchasesdk.iapservice.PurchaseService">
+            <intent-filter android:priority="313">
+                <action android:name="com.nhncorp.skundeadck.purchaseservice.BIND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="mm.purchasesdk.iapservice.BillingLayoutActivity" android:theme="@android:style/Theme.Translucent">
+            <intent-filter android:priority="313">
+                <action android:name="com.nhncorp.skundeadck.com.mmiap.activity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service android:exported="true" android:name="safiap.framework.SafFrameworkManager" android:process="safiap.framework">
+            <intent-filter android:priority="633">
+                <action android:name="safiap.framework.sdk.ISAFFramework"/>
+            </intent-filter>
+            <intent-filter android:priority="633">
+                <action android:name="safiap.framework.ACTION_START_DOWNLOAD"/>
+            </intent-filter>
+            <intent-filter android:priority="633">
+                <action android:name="safiap.framework.ACTION_CHECK_UPDATE"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="safiap.framework.CheckUpdateReceiver">
+            <intent-filter>
+                <action android:name="safiap.framework.ACTION_CANCEL_NOTIFICATION"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="safiap.GET_SHARED_DATA"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="safiap.framework.ACTION_SET_TIMER"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="orientation" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="safiap.framework.ui.UpdateHintActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="safiap.framework.ACTION_TO_INSTALL"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="safiap.framework.ACTION_TO_INSTALL_IAP"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="safiap.framework.ACTION_NETWORK_ERROR_IAP"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="safiap.framework.ACTION_NETWORK_ERROR_FRAMEWORK"/>
+            </intent-filter>
+        </activity>
+        <service android:name="safiap.framework.logreport.monitor.handler.LogreportHandler" android:process=":remote"/>
+        <receiver android:name="com.common.push.AlarmReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="packerApp" android:value="com.nhncorp.skundeadck.WlssApplication"/>
+    </application>
+</manifest>

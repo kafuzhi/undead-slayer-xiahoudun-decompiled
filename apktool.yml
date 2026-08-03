@@ -1,0 +1,29 @@
+version: 2.9.3
+apkFileName: shaxiahoudun.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  tag: null
+sdkInfo:
+  minSdkVersion: 10
+packageInfo:
+  forcedPackageId: 127
+  renameManifestPackage: null
+versionInfo:
+  versionCode: 36
+  versionName: 3.5.0
+resourcesAreCompressed: false
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  CopyrightDeclaration.xml: 8
+  VERSION: 8
+  mmiap.xml: 8
+doNotCompress:
+- resources.arsc
+- assets/.appkey
+- assets/pay.data
+- assets/bin/Data/21fbbfd204490b9419f73958dc89d217
+- assets/bin/Data/PlayerConnectionConfigFile
+- assets/bin/Data/sharedassets20.assets.split3

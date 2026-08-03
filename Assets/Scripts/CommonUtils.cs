@@ -1,0 +1,2012 @@
+// Namespace: 
+// Type: CommonUtils
+
+    public class CommonUtils {{
+
+    public static object STR_BLANK;
+    private static object random;
+    private object dictionary;
+    private static object WORD_BREAK;
+    private object json;
+    private static object <>f__switch$map0;
+    public object value__;
+    public static object NONE;
+    public static object CURLY_OPEN;
+    public static object CURLY_CLOSE;
+    public static object SQUARED_OPEN;
+    public static object SQUARED_CLOSE;
+    public static object COLON;
+    public static object COMMA;
+    public static object STRING;
+    public static object NUMBER;
+    public static object TRUE;
+    public static object FALSE;
+    public static object NULL;
+    private object builder;
+    private object iszoom;
+    private object script_ui;
+    public object arrow;
+    private object mytransform;
+    private object c_arrow;
+    private object mycollider;
+    private object arrowdir;
+    private object reload_delay;
+    private object cur_stage_index;
+    private object script_hpbar;
+    private object script_cha;
+    private object script_cam;
+    private object hpbar;
+    private object mytransform;
+    private object attackdir;
+    private object damage;
+    private object life;
+    private object maxhp;
+    private object hp;
+    private object cur_stage_index;
+    public object iscastle;
+    public object mydestroy;
+    private object istower;
+    private object parent_cha;
+    private object mytransform;
+    private object mytransform;
+    private object mycollider;
+    public object firerate;
+    public object duration;
+    public object startdelay;
+    public object rndRotation;
+    public object startPosY;
+    public object startScale;
+    public object growScaleSpeed;
+    public object movedir;
+    public object accuracy;
+    public object playAutomatically;
+    public object liveObj;
+    private object trapOn;
+    private object originTrapScale;
+    private object target;
+    private object scaleUp;
+    private object scaleDown;
+    private object moveOn;
+    private object damage;
+    private object guide_img;
+    public object pop_blank;
+    private object guide_curent_subindex;
+    private object language;
+    public object basicSkin;
+    public object bt_yesno;
+    private object mymaterial;
+    private object mytransform;
+    private object startscale;
+    private object targetscale;
+    private object finish_delay;
+    private object isdelay;
+    private object thismesh;
+    private object destroydelay;
+    private object originpos;
+    private object mytransform;
+    private object originscale;
+    private object thismesh;
+    private object destroydelay;
+    private object originpos;
+    private object mytransform;
+    private object originscale;
+    private object anistart;
+    private static object MAXSTAGE;
+    private static object MAXWORK;
+    private object MAXRANKING;
+    public object sound_dummy;
+    private object bg_dun;
+    private object bg_dun_cover;
+    private object bg_dun_below;
+    public object flag_icon;
+    private object grade_extreme;
+    public object icon_stage;
+    public object plane_friend;
+    public object num_stage_index;
+    public object ring_active;
+    public object gifticon;
+    public object pop_blank;
+    public object pop_blank2;
+    public object bg_title;
+    public object bg_title_me;
+    public object icon_key;
+    public object toggle_active;
+    public object bg_asset;
+    public object bg_asset_lv;
+    public object bg_asset_key;
+    public object gauge_exp;
+    public object black;
+    public object black_all;
+    public object bg_option;
+    public object ico_slide;
+    public object img_skill_slot;
+    public object bg_item;
+    public object icon_coin;
+    public object img_menu;
+    public object img_consumeItem;
+    public object bt_lockmenu;
+    public object bt_lockmenu2;
+    public object bt_unlockstage;
+    public object menutray;
+    public object icon_ranktab;
+    public object errorimg;
+    public object icon_info;
+    public object txt_start;
+    public object arrow_next;
+    public object icon_table;
+    public object icon_friend_plus;
+    public object bg_speech;
+    public object bg_red;
+    public object icon_jade;
+    public object tex_currentStage;
+    public object txt_extreme;
+    public object txt_loading;
+    public object ico_warn;
+    public object gift_title;
+    public object gift_five_percnt;
+    public object gift_skill;
+    public object gift_coin;
+    public object gift_bg_item;
+    public object gift_skill_bg;
+    public object rank_bg;
+    public object rank_item_bg;
+    public object icon_toprank;
+    public object blockName;
+    private object myimage;
+    private object skillicon;
+    private object menuarray;
+    private object item_price;
+    private object skill_slot;
+    private object item_slot;
+    public object bar_slide;
+    public object bt_empty;
+    public object bt_start;
+    public object bt_back;
+    public object sel_lang;
+    public object pausemenu;
+    public object bt_yesno;
+    public object bt_menu;
+    public object bt_shop;
+    public object bt_arrow_r;
+    public object bt_arrow_l;
+    public object bt_general_small;
+    public object bt_plus;
+    public object bt_gift;
+    public object bt_rank;
+    public object rank_name;
+    public object bg_ownRanking;
+    private object username;
+    private object readyOn;
+    private object option;
+    private object pause;
+    private object slideon;
+    private object slideon2;
+    private object isSend;
+    private object changescene;
+    private object loadfinish;
+    private object newarchive;
+    private object newtreasure;
+    private object vol_master;
+    private object vol_bgm;
+    private object script_archive;
+    public object basicSkin;
+    private object curMousePosY;
+    private object startMousePosY;
+    private object startMousePosY_rank;
+    private object curMousePosY_rank;
+    private object scrollPosition;
+    private object prev_scrollPosition;
+    private object rank_scrollPosition;
+    private object rank_prev_scrollPosition;
+    private object inputrect;
+    private object language;
+    private object posX;
+    private object posX_r;
+    private object posY;
+    private object coin;
+    private object jade;
+    private object chalv;
+    private object maxStage;
+    private object currentStage;
+    private object max_stage_index;
+    private object length_exp;
+    private object sound_UI;
+    private object hiticon;
+    private object cashshop;
+    private object rankobj;
+    private object scopemode;
+    private object confirm;
+    private object menuopen;
+    private object script_soundUI;
+    private object script_cam;
+    private object key_cave;
+    private object totalprice;
+    private object selectItem;
+    private object selectblank;
+    private object expand_height;
+    private object expand_height2;
+    private object cur_workdelay;
+    private object time_hour;
+    private object time_min;
+    private object extreme_point;
+    private object cur_general;
+    private object cur_generalmaxhp;
+    private object general_seed;
+    private object general_hp;
+    private object general_cur_hp;
+    private object prt_general;
+    public object gauge_hp;
+    public object empty;
+    private object icon_size;
+    private object uploadprofile;
+    private object invitefriend;
+    private object b_delay;
+    private object f_delay;
+    private object haveGiftBox;
+    private object bb;
+    private object script_generalstat;
+    private object ban_on_drag;
+    private object showReward;
+    private object isSendGetReward;
+    private object canThrough;
+    private object control_rank_bt;
+    private static object MAX_FB_FRIENDS;
+    private static object MAX_HSP_FRIENDS;
+    private static object RECOMMEND_FRIENDS;
+    private object mykeyboard;
+    private object ff;
+    private object hf;
+    private object rf;
+    private object fb_friend_num;
+    private object hsp_friend_num;
+    private object recommend_num;
+    public object bg_title;
+    public object bg_title_me;
+    public object icon_key;
+    public object toggle_active;
+    public object errorimg;
+    public object icon_ranktab;
+    public object please_touch;
+    private object myimage;
+    public object bt_empty;
+    public object bt_start;
+    public object bt_back;
+    public object bt_plus;
+    public object bt_remove;
+    public object bt_yesno;
+    public object basicSkin;
+    private object curMousePosY;
+    private object startMousePosY;
+    private object scrollPosition;
+    private object prev_scrollPosition;
+    private object language;
+    private object posX_l;
+    private object posX_r;
+    private object posY;
+    private object ui;
+    private object reload;
+    private object facebooklogin;
+    private object facebook_load;
+    private object keyboardactive;
+    private object tempnick;
+    private object mode;
+    private object currenttab;
+    private object icon_size;
+    private object confirm;
+    private object version;
+    private object access_token;
+    private object detail_count;
+    public object _fbid;
+    public object _hspNo;
+    public object _name;
+    public object _picture;
+    public object _isfriend;
+    public object _memberNo;
+    public object _name;
+    public object _picture;
+    public object _memberNo;
+    public object _name;
+    public object _picture;
+    public object _isfriend;
+    private object chamaxhp;
+    private object chahp;
+    private object chasp;
+    private object chamaxsp;
+    private object chaexp;
+    private object chalv;
+    private object atk;
+    private object def;
+    private object hit;
+    private object spr;
+    private object chargeon;
+    private object infinitymode;
+    private object returnmap;
+    private object soul;
+    private object f_soul;
+    private object jade;
+    private object coin;
+    private object extreme_point;
+    private object dropcoin;
+    private object dropjade;
+    private object total_star;
+    private object soulgain;
+    public object pack;
+    public object pt_levelup;
+    public object num_level;
+    public object bg_popui;
+    public object cut_extreme;
+    public object card;
+    public object ui_ingame_gui;
+    public object txt_maxcombo;
+    private object txt_result;
+    private object txt_star;
+    private object g_mp;
+    private object g_hp;
+    private object g_power;
+    private object stage_num;
+    private object point_num;
+    private object extreme_num;
+    private object getcoin_num;
+    private object giftbox;
+    private object cha1;
+    private object g_combo;
+    private object chaprevlv;
+    private object damagecount;
+    private object finishdelay;
+    private object hp_length;
+    private object sp_length;
+    private object mp_length;
+    private object exp_height;
+    private object combo_length;
+    private object playtime;
+    private object general;
+    private object generaldead;
+    private object gauge_scalechange;
+    private object cur_general;
+    public object cur_difficulty;
+    public object angelOn;
+    private object cur_angel;
+    private object play_kind;
+    private object f_charge;
+    private object loadingfinish;
+    private object supermode;
+    private object wave;
+    private object enemykill;
+    private object grappling;
+    private object finalstage;
+    private object exattack;
+    private object max_stage_index;
+    private object cur_stage_index;
+    private object tutorial;
+    private object getcoin;
+    private object killcount;
+    private object rewardkind;
+    private object totalkillcount;
+    private object tutorial_maxcombo;
+    private object stage_progress;
+    private object script_cha;
+    private object script_pack;
+    private object script_spawn;
+    private object script_OnGUI;
+    private object script_icon;
+    private object gauge_hp;
+    private object gauge_sp;
+    private object gauge_mp;
+    private object gauge_exp;
+    private object gauge_power;
+    private object gauge_stage;
+    private object gauge_combo;
+    private object stageRegen;
+    private object extreme_point_cur;
+    public object pausemenu;
+    public object bg_pause;
+    public object bg_option;
+    public object ico_slide;
+    public object icon_jade;
+    public object pop_blank;
+    public object touchthis;
+    private object guide_img;
+    private object guidestart;
+    private object guide_index;
+    private object guide_maxindex;
+    private object guide_curent_subindex;
+    private object guide_txt;
+    private object guide_point;
+    private object guide_point_pos;
+    private object guide_img_rect;
+    private object getAngelIndex;
+    public object zoom;
+    public object sel_lang;
+    public object bar_slide;
+    public object bt_yesno;
+    private object infinitymode;
+    public object angel;
+    private object vol_bgm;
+    private object vol_master;
+    private object color_alpha;
+    private object slideon;
+    private object slideon2;
+    private object angelOn;
+    private object showAds;
+    private object script_cha;
+    private object script_spawn;
+    private object script_generalstat;
+    private object cashshop;
+    private object cashshopOn;
+    private object count;
+    private object require_jade;
+    private object jade;
+    private object pause;
+    private object option;
+    private object chance;
+    private object language;
+    private object script_UI;
+    public object basicSkin;
+    private object tempcamfov;
+    private object chahp;
+    private object chamaxhp;
+    private object chasp;
+    private object chamaxsp;
+    private object chaexp;
+    private object chalv;
+    private object soul;
+    private object coin;
+    private object guide;
+    public object pop_blank;
+    public object pack;
+    private object g_power;
+    private object script_pack;
+    private object gauge_hp;
+    private object gauge_sp;
+    private object gauge_exp;
+    private object gauge_power;
+    private object guide_txt;
+    public object guide_img;
+    public object yesno;
+    private object exp_height;
+    private object shootdir;
+    private object uistart;
+    private object f_charge;
+    private object chargeon;
+    public object basicSkin;
+    private object cha1;
+    private object script_cha;
+    private object script_horse;
+    private object language;
+    public object ci;
+    public object review_icon;
+    public object txt_loading;
+    public object basicSkin;
+    private object step;
+    private object language;
+    public object coco_bg;
+    public object coco_cha;
+    public object duoku_bg;
+    public object uc_bg;
+    public object jinshan_bg;
+    public object menhu_bg;
+    public object anzhi_bg;
+    public object black_bg;
+    public object coco_logo;
+    public object muzhiwan_bg;
+    private object channelId;
+    private object usimCheck;
+    private static object MAXSKILL;
+    private static object MAXARCHIVE;
+    private static object MAXGENERALPOOL;
+    private static object MAXTREASURE;
+    public object icon_warning;
+    public object bg_archive;
+    public object txt_name;
+    public object archive_complete;
+    public object archive_gift;
+    public object bg_archiverate;
+    public object gauge_rate;
+    public object bg_black;
+    public object bg_title;
+    public object pop_blank2;
+    public object icon_jade;
+    public object icon_coin;
+    public object bg_asset;
+    public object bg_scroll;
+    public object titlebase;
+    public object numberbase;
+    public object please_touch;
+    public object bg_general_detail;
+    public object bt_roullete;
+    public object bt_roullete_active;
+    public object img_kind;
+    public object prt_general;
+    public object icon_treasure;
+    public object gifticon;
+    private object treasure_gift;
+    public object bt_yesno;
+    public object bt_back;
+    public object bt_kind;
+    public object bt_general;
+    public object bt_empty;
+    public object basicSkin;
+    private object select_index;
+    private object inactive;
+    private object cashshop;
+    private object sound_UI;
+    private object script_soundUI;
+    private object script_archname;
+    private object script_name;
+    private object script_archive;
+    private object scrollPosition;
+    private object prev_scrollPosition;
+    private object startMousePosY;
+    private object curMousePosY;
+    private object bg_posX_l;
+    private object bg_posX_r;
+    private object icon_posY;
+    private object imagemovefinish;
+    private object b_delay;
+    private object f_delay;
+    private object confirm;
+    private object selectgeneral;
+    private object coin;
+    private object jade;
+    private object selectblank;
+    private object expand_height;
+    private object expand_height2;
+    private object language;
+    private object step;
+    private object count_staff;
+    private object count_treasure;
+    private object temp_treasure;
+    private object temp_staff;
+    private object complete_archive;
+    private object current_archive;
+    private object rate_archive;
+    private object gift_archive;
+    private object warning_newarchive;
+    private object warning_newtreasure;
+    private object unlock_costume;
+    private object bosskill;
+    private object skill_use;
+    private object pet_skill_use;
+    private object enemykill;
+    private object grappling;
+    private object exattack;
+    private object death;
+    private object resurrection;
+    private object cashing;
+    private object max_stage_index;
+    private object remain_arch;
+    private object icon_size;
+    private object tutorial;
+    private object generalsearch;
+    private object cur_skill_grade;
+    private object caveplay;
+    private object perfectplay;
+    public object bt_empty;
+    public object bt_yesno;
+    public object bt_back;
+    public object bt_history;
+    public object basicSkin;
+    public object prt_shop;
+    public object img_jade;
+    public object img_coin;
+    public object img_pr;
+    public object img_weapon;
+    public object img_armor;
+    public object img_acce;
+    public object img_etc;
+    public object img_menu;
+    private object icon_gem;
+    public object bg_asset;
+    public object bg_black;
+    public object titlebase;
+    public object icon_jade;
+    public object icon_coin;
+    public object pop_blank2;
+    public object pop_blank3;
+    public object bg_cashlist;
+    public object icon_doller;
+    public object icon_won;
+    public object icon_yen;
+    public object soldout;
+    public object freejade;
+    public object limitedSale;
+    private object icon_cashcost;
+    public object bg_item;
+    public object bg_item_0;
+    public object percent_image;
+    public object weapon_kindicon;
+    public object titlebase_w;
+    public object txt_amount;
+    public object weapon_dummy;
+    public object spine_dummy;
+    private object confirm;
+    private object dragOn;
+    private object scrollOn;
+    private object dragposX;
+    private object prevposX;
+    private object currentX;
+    private object dragrange;
+    private object ui;
+    private object ui2;
+    private object language;
+    private object select_itemidx;
+    private object coin;
+    private object jade;
+    private object linecount;
+    private object eventName;
+    private object starttime;
+    private object bg_posX_l;
+    private object bg_posX_r;
+    private object icon_posY;
+    private object get_jade_amount;
+    private object cost_jade;
+    private object CT_ID;
+    private object cost_acce;
+    private object cost_coin;
+    private object goods_coin;
+    private object cost_weapon;
+    private object cost_armor;
+    private object cost_etc;
+    private object reqLvFactor_weapon;
+    private object reqLvFactor_equip;
+    private object itemindex;
+    private object unlock_costume;
+    private object unlock_weapon;
+    private object gem_inven;
+    private object accessory;
+    private object cashing;
+    private object scrollPosition;
+    private object prev_scrollPosition;
+    private object startMousePosY;
+    private object curMousePosY;
+    private object popupOn;
+    private object freecash;
+    private object webshop;
+    private object log_string;
+    private object kind_cash;
+    private object review;
+    private object kakao;
+    private object reviewURL;
+    private object cur_weapon;
+    private object cur_equip;
+    private object selectweapon;
+    private object selectequip;
+    private object chalv;
+    private object selweapon_meshkind;
+    private object selweapon_kind;
+    private object selweapon_grade;
+    private object selweapon_name;
+    private object selweapon_maxatk;
+    private object selweapon_minatk;
+    private object selweapon_spd;
+    private object selweapon_special;
+    private object selweapon_special_txt;
+    private object selequip_index;
+    private object selequip_special;
+    private object selequip_hp;
+    private object margin;
+    private object script_name;
+    private object script_weaponstat;
+    private object script_costume;
+    private object script_weapon;
+    private object weapon_seed;
+    private object costume_seed;
+    private object scene_kind;
+    private object st_cashkind;
+    private object getItem;
+    public object bg_status;
+    public object txt_name;
+    public object bg_black;
+    public object icon_lock;
+    public object icon_unlock;
+    public object titlebase;
+    public object titlebase_w;
+    public object pop_blank;
+    public object pop_blank2;
+    public object star_grade;
+    public object slot_circle;
+    public object bg_upgrade;
+    public object upgrade_emptyslot;
+    public object upgrade_slot;
+    public object c_equip;
+    public object bg_asset;
+    public object icon_jade;
+    public object icon_coin;
+    public object stat_arrow;
+    public object bg_hitgauge;
+    public object gauge;
+    public object weapon_kindicon;
+    public object gem_tex;
+    public object arrow_upgrade;
+    public object emptyslot;
+    public object gem_color;
+    public object bg_hammerhit;
+    public object please_touch;
+    public object tab_1;
+    public object tab_2;
+    public object tab_over;
+    public object fillbox_unique;
+    public object fillbox_normal;
+    public object equipicon;
+    public object weaponicon;
+    private object bottom_weaponicon;
+    private object bottom_equipicon;
+    private object weapon_grade;
+    public object invenkind;
+    public object bt_equip;
+    public object bt_yesno;
+    public object bt_back;
+    public object erase;
+    public object bt_plus;
+    public object sub_menu;
+    public object bt_upgrade;
+    public object bt_empty;
+    public object bt_init;
+    private object cha1;
+    public object bg_cha1;
+    public object weapon_dummy;
+    public object ef_hammer;
+    public object ef_result;
+    public object pt_plus;
+    public object basicSkin;
+    private object empty;
+    private object script_costume;
+    private object script_weapon;
+    private object script_hammer;
+    private object cashshop;
+    private object sound_UI;
+    public object sound_dummy;
+    private object script_soundUI;
+    private object script_name;
+    private object bg_posX_l;
+    private object bg_posX_r;
+    private object icon_posY;
+    private object pop_upgrade;
+    private object maxupgrade;
+    private object selectequip;
+    private object cur_equip;
+    private object selectweapon;
+    private object cur_weapon;
+    private object chalv;
+    private object menu_kind;
+    private object subkind;
+    private object coin;
+    private object jade;
+    private object confirm;
+    private object dragOn;
+    private object scrollOn;
+    private object dragposX;
+    private object prevposX;
+    private object currentX;
+    private object imagemovefinish;
+    private object cur_iconpos;
+    private object cur_iconpos2;
+    private object targetpos;
+    private object targetpos2;
+    private object language;
+    private object plusfactor;
+    private object oldplusfactor;
+    private object slot_weapon;
+    private object slot_costume;
+    private object b_delay;
+    private object f_delay;
+    private object dragrange;
+    private object selweapon_index;
+    private object selweapon_cost;
+    private object selweapon_meshkind;
+    private object selweapon_kind;
+    private object selweapon_grade;
+    private object selweapon_name;
+    private object selweapon_maxatk;
+    private object selweapon_minatk;
+    private object selweapon_spd;
+    private object selweapon_special;
+    private object selweapon_special_txt;
+    private object selweapon_upgrade;
+    private object upgradelimit;
+    private object selequip_cost;
+    private object selequip_index;
+    private object selequip_special;
+    private object selequip_hp;
+    private object oldweapon_meshkind;
+    private object oldweapon_kind;
+    private object unlock_costume;
+    private object unlock_weapon;
+    private object cost_armor;
+    private object reqLvFactor_weapon;
+    private object reqLvFactor_equip;
+    private object weapon_seed;
+    private object costume_seed;
+    private object weapon_plusup;
+    private object gem_inven;
+    private object upgradecost;
+    private object script_weaponstat;
+    private object select_gem;
+    private object hitcount;
+    private object hitgaugeX;
+    private object targetgaugeX;
+    private object tutorial;
+    private object icon_size;
+    private static object MAXGENERAL;
+    private static object MAXGENERALPOOL;
+    private static object SLOTPRICE;
+    private static object MAXWORK;
+    private static object MAXTEMPGENERAL;
+    public object basicSkin;
+    private object cur_general;
+    private object sel_general;
+    private object comb_general;
+    private object jade;
+    private object coin;
+    private object getslot;
+    private object slot_general;
+    private object prt_general;
+    private object language;
+    private object general_seed;
+    private object general_hp;
+    private object general_cur_hp;
+    private object general_exp;
+    private object general_grade;
+    private object general_level;
+    private object ismaxhp;
+    private object cur_workdelay;
+    private object temp_general;
+    private object cardtype_count;
+    private object temp_general_cardtype;
+    public object general_weapon;
+    public object icon_popgeneralkind;
+    public object bg_titlename;
+    public object bg_general;
+    public object star_grade;
+    public object gauge_hp;
+    public object titlebase;
+    public object titlebase3;
+    public object hpbase;
+    public object icon_jade;
+    public object icon_coin;
+    public object gauge_exp;
+    public object black_all;
+    public object black;
+    public object arrow_combine;
+    public object bg_inherit;
+    public object please_touch;
+    public object pop_blank;
+    public object pop_blank2;
+    public object icon_unlock;
+    public object bg_speech;
+    public object sel_mark;
+    public object ico_lock;
+    public object bg_red;
+    public object empty;
+    public object bt_general_small;
+    public object card_general;
+    public object icon_alarm;
+    public object bg_asset;
+    public object pausemenu;
+    public object bt_dismiss;
+    public object bt_general;
+    public object bt_roll;
+    public object bt_empty;
+    public object bt_back;
+    public object bt_yesno;
+    public object fortune_teller;
+    public object sound_dummy;
+    public object bg_popui;
+    public object bg_card;
+    public object bg_combine;
+    public object ef_card_l;
+    public object ef_card_r;
+    public object ef_card_dis;
+    public object ani_walk;
+    private object sound_UI;
+    private object cashshop;
+    private object iconmove;
+    private object pop_general;
+    private object general_index;
+    private object general_kind;
+    private object g_maxatk;
+    private object g_def;
+    private object g_maxhp;
+    private object g_grade;
+    private object g_level;
+    private object comb_grade;
+    private object comb_level;
+    private object comb_maxatk;
+    private object comb_def;
+    private object comb_maxhp;
+    private object comb_get_level;
+    private object show_fortune_teller;
+    private object confirm;
+    private object g_atkspd;
+    private object comb_atkspd;
+    private object g_exp_length;
+    private object comb_exp_length;
+    private object comb_exp;
+    private object get_exp;
+    private object bg_posX_r;
+    private object icon_posY;
+    private object posX1;
+    private object posX2;
+    private object cur_generalmaxhp;
+    private object f_delay;
+    private object cardposY;
+    private object showcard_delay;
+    private object gaugeup;
+    private object changemode;
+    private object b_delay;
+    private object giftmode;
+    private object script_name;
+    private object script_generalstat;
+    private object script_soundUI;
+    private object dragOn;
+    private object scrollOn;
+    private object prevposX;
+    private object currentX;
+    private object dragposX;
+    private object dragrange;
+    private object tutorial;
+    private object icon_size;
+    private object rnd_speech;
+    private object typeslot;
+    private object totalcount;
+    private object showcard;
+    private static object MAXPET;
+    private static object MAXSKILL;
+    private static object MAXWORK;
+    private static object MAXGENERAL;
+    private static object MAXGENERALPOOL;
+    private static object MAXTREASURE;
+    private static object MAXSTAGE;
+    private object iscontinue;
+    private object vol_bgm;
+    private object vol_master;
+    private object language;
+    private object guion;
+    private object option;
+    private object slideon;
+    private object slideon2;
+    private object redeemOn;
+    private object classmark;
+    private object drawed;
+    public object bg_pause;
+    public object bg_option;
+    public object ico_slide;
+    public object bi;
+    public object pop_blank;
+    public object cl_over15;
+    public object cl_vioence;
+    public object txt_story;
+    public object txt_extreme;
+    public object img_start;
+    public object black;
+    public object img_reward_bg;
+    public object img_reward_jade;
+    public object img_reward_gold;
+    public object img_reward_num_0;
+    public object img_reward_num_1;
+    public object img_reward_num_2;
+    public object img_reward_num_3;
+    public object img_reward_num_4;
+    public object img_reward_num_5;
+    public object img_reward_num_6;
+    public object img_reward_num_7;
+    public object img_reward_num_8;
+    public object img_reward_num_9;
+    public object img_reward_ranking;
+    public object img_reward_x;
+    public object img_reward_tel_bg;
+    public object img_mode;
+    public object basicSkin;
+    public object bt_empty;
+    public object bt_redeem;
+    public object bt_new;
+    public object bt_yesno;
+    public object bar_slide;
+    public object sel_lang;
+    public object bt_menu;
+    public object bt_cgp;
+    public object img_reward_tel_x;
+    public object bt_ownRanking;
+    private object showAds;
+    private object warning;
+    private object freecash;
+    private object promotion_exist;
+    private object transalpha;
+    private object negative;
+    private object userdata;
+    private object s_version;
+    private object confirm;
+    private object isSendGetReward;
+    private object can_through;
+    public object font;
+    private object telNumber;
+    private object txt_getJade;
+    private static object MAXSTAGE;
+    private static object MAXPET;
+    private static object MAXWORK;
+    private static object MAXGENERAL;
+    private static object SLOTPRICE;
+    private static object MAXRANKING;
+    public object basicSkin;
+    public object tex_eventicon;
+    public object pop_blank;
+    public object pop_blank2;
+    public object pop_stage;
+    public object icon_clear;
+    public object bg_option;
+    public object ico_slide;
+    public object ico_warn;
+    public object ico_new;
+    public object please_touch;
+    public object bg_mission;
+    public object bg_mission_clear;
+    public object mission_lock;
+    public object bt_lockmenu;
+    public object icon_mission;
+    public object bg_titlename;
+    public object icon_coin;
+    public object icon_jade;
+    private object icon_treasure;
+    private object prt_general;
+    private object prt_general_get;
+    private object skillicon;
+    public object titlebase;
+    public object titlebase3;
+    public object hpbase;
+    public object txt_start;
+    public object bg_general;
+    public object star_grade;
+    public object black_all;
+    public object black;
+    public object gauge_hp;
+    public object gauge_exp;
+    public object bg_asset;
+    public object bg_asset_lv;
+    public object bg_asset_key;
+    public object general_weapon;
+    public object icon_stagekind;
+    public object icon_key;
+    public object img_skill_slot;
+    public object icon_explorekind;
+    public object bg_red;
+    public object empty;
+    public object txt_story;
+    public object txt_loading;
+    public object gift_title;
+    public object gift_five_percnt;
+    public object gift_skill;
+    public object gift_coin;
+    public object gift_bg_item;
+    public object gift_skill_bg;
+    public object img_menu;
+    public object icon_ef;
+    public object icon_active;
+    public object icon_mainbattle;
+    public object icon_mainbattle_clear;
+    public object sound_dummy;
+    public object ef_creaticon;
+    public object ef_breakicon;
+    public object bg_popui;
+    public object ani_walk;
+    private object bg_worldmap;
+    public object bt_stagestart;
+    public object bt_menu;
+    public object pausemenu;
+    public object bar_slide;
+    public object bt_yesno;
+    public object sel_lang;
+    public object bt_explore;
+    public object bt_sqbox;
+    public object bt_general;
+    public object bt_general_small;
+    public object bt_empty;
+    public object bt_bonus;
+    public object bt_gift;
+    public object bt_shop;
+    private object c_battleicon;
+    private object c_iconef;
+    private object c_eficon_creat;
+    private object c_eficon_break;
+    private object sound_UI;
+    private object uicam;
+    private object script_soundUI;
+    private object script_cam;
+    private object script_name;
+    private object script_generalstat;
+    private object script_archive;
+    private object cur_stage_iconpos;
+    private object battleposition;
+    private object stageon;
+    private object iconactive;
+    private object bosscutin;
+    private object pause;
+    private object option;
+    private object slideon;
+    private object slideon2;
+    private object warning_hungry;
+    private object warning_new;
+    private object newarchive;
+    private object newtreasure;
+    private object zoom_total;
+    private object transmode;
+    private object showAds;
+    private object storycutin;
+    private object b_scenario;
+    private object exploreMode;
+    private object changescene;
+    private object explore_progress;
+    private object confirm;
+    private object treasurekind;
+    private object max_stage_index;
+    private object on_stage_index;
+    private object sel_stage_index;
+    private object cur_general;
+    private object sel_general;
+    private object cur_stage_name;
+    private object cur_stage_kind;
+    private object cutinXpos;
+    private object getslot;
+    private object cur_generalmaxhp;
+    private object trans_delay;
+    private object explorekind;
+    private object treasureindex;
+    private object icon_size;
+    private object jade;
+    private object coin;
+    private object key_cave;
+    private object rnd_speech;
+    private object explore_method;
+    private object cur_difficulty;
+    private object slot_general;
+    private object language;
+    private object b_delay;
+    private object f_delay;
+    private object vol_bgm;
+    private object vol_master;
+    private object iconmove;
+    private object general_index;
+    private object general_kind;
+    private object g_maxatk;
+    private object g_def;
+    private object g_maxhp;
+    private object g_grade;
+    private object g_level;
+    private object g_atkspd;
+    private object stage_clear_grade;
+    private object general_seed;
+    private object general_hp;
+    private object general_cur_hp;
+    private object extra_info;
+    private object chalv;
+    private object event_stage;
+    private object length_exp;
+    private object menuopen;
+    private object menuarray;
+    private object cur_workdelay;
+    private object pet_hunger;
+    private object skill_slot;
+    public object icon_folder;
+    public object icon_explore;
+    public object icon_dun;
+    public object obj_scenario;
+    public object total_collider;
+    private object eventicon;
+    private object play_kind;
+    private object tutorial;
+    private object haveGiftBox;
+    private object cashshop;
+    private object ranking;
+    private object chaexp;
+    private object poprect;
+    private object overui;
+    private object clickButton;
+    private object v2;
+    private static object MAXPET;
+    private static object MAXANGEL;
+    public object bg_pet;
+    public object txt_name;
+    public object bg_black;
+    public object pop_detail;
+    public object pop_blank;
+    public object pop_blank2;
+    public object c_equip;
+    public object item_stat;
+    public object skill_stat;
+    public object angel;
+    public object bt_yesno;
+    public object bt_back;
+    public object bt_petkind;
+    public object bt_info;
+    public object bt_empty;
+    public object bg_asset;
+    public object cost_icon;
+    public object jade_icon;
+    public object titlebase;
+    public object icon_unlock;
+    public object ico_feed;
+    public object ico_arrow;
+    public object ico_stamina;
+    public object ico_stamina_empty;
+    public object ico_warn;
+    public object petkind;
+    public object basicSkin;
+    private object script_costume;
+    private object script_dbangel;
+    private object cashshop;
+    private object sound_UI;
+    private object script_soundUI;
+    private object ps;
+    private object bg_posX_l;
+    private object bg_posX_r;
+    private object icon_posY;
+    private object currentpet;
+    private object confirm;
+    private object icon_size;
+    private object coin;
+    private object jade;
+    private object cost_feed;
+    private object menu_kind;
+    public object pet_mesh;
+    private object language;
+    private object pet_activeskill;
+    private object pet_passiveskill;
+    private object pet_hunger;
+    private object b_delay;
+    private object f_delay;
+    private object warning_hungry;
+    private object gamemode;
+    private object dragOn;
+    private object scrollOn;
+    private object prevposX;
+    private object currentX;
+    private object dragrange;
+    private object dragposX;
+    private object maxExtremeStage;
+    private object cur_angel;
+    private object sel_angel;
+    private object angel_firerate;
+    private object angel_name;
+    private object angel_info;
+    private object show_delay;
+    private object openbox;
+    private object getpoint;
+    private object startexpgain;
+    public object isclear;
+    private object clear_grade;
+    private object cur_stage_index;
+    public object max_stage_index;
+    private object coin;
+    private object dropcoin;
+    private object jade;
+    private object dropjade;
+    private object getcoin;
+    private object getexp;
+    private object chalv;
+    private object chaexp;
+    private object language;
+    private object getcoin_f;
+    private object getexp_f;
+    private object gonext;
+    private object starmove;
+    public object basicSkin;
+    public object bg_asset;
+    public object gauge_exp;
+    public object bg_list;
+    public object bg_gauge;
+    public object icon_coin;
+    public object icon_jade;
+    public object star_big;
+    public object bg_speech2;
+    public object img_bts;
+    public object icon_mission;
+    public object bt_empty;
+    public object pt_star;
+    public object inven_weapon;
+    private object icon_size;
+    private object posX;
+    private object cashshop;
+    private object movefinish;
+    private object b_getgem;
+    private object changelevel;
+    private object icon_pluspos;
+    private object ranking;
+    private object b_openshop;
+    private object mission_archive_current;
+    private object mission_archive_already;
+    private object efon;
+    private object curtraining;
+    private object trainmax;
+    public object bgm_victory;
+    public object bgm_defeat;
+    private object cur_difficulty;
+    public object isclear;
+    public object max_stage_index;
+    private object coin;
+    private object jade;
+    private object chalv;
+    private object language;
+    private object gonext;
+    public object basicSkin;
+    public object bg_asset;
+    public object img_bts;
+    public object bt_empty;
+    private object cashshop;
+    private object changelevel;
+    private object icon_pluspos;
+    private object b_openshop;
+    private object show_delay;
+    private object posX;
+    private object show_ui;
+    private object getpoint;
+    private object movefinish;
+    private object coin;
+    private object jade;
+    private object getcoin;
+    private object getcoin_og;
+    private object count_coin;
+    private object count_monster;
+    private object count_behit;
+    private object count_loss;
+    private object getcoin_f;
+    private object language;
+    private object gonext;
+    public object basicSkin;
+    public object bg_asset;
+    public object bg_list;
+    public object img_map;
+    public object bt_empty;
+    private object pet_passiveskill;
+    private object script_cha;
+    private static object MAXSKILL;
+    public object bg_skill;
+    public object txt_name;
+    public object bg_black;
+    public object bg_black100;
+    public object pop_detail;
+    public object pop_blank;
+    public object pop_blank2;
+    private object cost_icon;
+    public object bg_asset;
+    public object titlebase;
+    public object titlebase_w;
+    public object arrow;
+    public object active_slot;
+    public object icon_jade;
+    public object icon_coin;
+    public object icon_soul;
+    public object please_touch;
+    public object skillicon;
+    public object icon_diamond;
+    public object bt_skill;
+    public object bt_yesno;
+    public object bt_back;
+    public object bt_skill_slot;
+    public object bt_empty;
+    public object basicSkin;
+    public object sound_dummy;
+    private object cashshop;
+    private object sound_UI;
+    private object script_soundUI;
+    private object bg_posX_l;
+    private object bg_posX_r;
+    private object icon_posY;
+    private object selectskill;
+    private object popupOn;
+    private object b_delay;
+    private object f_delay;
+    private object confirm;
+    private object dragOn;
+    private object scrollOn;
+    private object dragposX;
+    private object prevposX;
+    private object currentX;
+    private object dragrange;
+    private object chalevel;
+    private object coin;
+    private object jade;
+    private object updatestring;
+    private object imagemovefinish;
+    public object cur_skill_grade;
+    private object ss;
+    private object skill_slot;
+    private object language;
+    private object emptyslot;
+    private object tutorial;
+    private object icon_size;
+    private object ss_url;
+    private object ss_skill;
+    private object imageloading;
+    private object showimg;
+    private object www;
+    public object bg_shop;
+    public object bg_black;
+    public object pop_detail;
+    public object pop_blank;
+    public object pop_blank2;
+    public object cost_icon;
+    public object bg_asset;
+    public object arrow_upgrade;
+    public object titlebase;
+    public object gauge_exp;
+    public object equipicon;
+    public object img_acce;
+    public object bt_equip;
+    public object bt_yesno;
+    public object bt_back;
+    public object titlebase2;
+    public object bt_prev;
+    public object bt_next;
+    public object bt_empty;
+    public object bt_acce;
+    public object basicSkin;
+    private object cashshop;
+    private object sound_UI;
+    public object sound_dummy;
+    private object script_soundUI;
+    private object bg_posX_l;
+    private object bg_posX_r;
+    private object icon_posY;
+    private object selectequip;
+    private object confirm;
+    private object popup_equip_select;
+    private object imagemovefinish;
+    private object coin;
+    private object jade;
+    private object rollstat;
+    private object level;
+    private object maxhp;
+    private object exp;
+    private object select_itemidx;
+    private object thisitemStat;
+    private object b_delay;
+    private object f_delay;
+    private object cur_equip_grade;
+    private object ei;
+    private object language;
+    private object statinfo;
+    private object statname_idx;
+    private object hpplus;
+    private object hitrate;
+    private object evasion;
+    private object endurance;
+    private object critical;
+    private object accessory;
+    private object mytransform;
+    public object damage;
+    public object impactDestroy;
+    public object destroytime;
+    public object colliderofftime;
+    private object currenttime;
+    private object mycollider;
+    private object mytransform;
+    private object maxy;
+    private object drop;
+    private object rotateaxis;
+    public object weapon_index;
+    public object weapon_meshkind;
+    public object weapon_kind;
+    public object weapon_name;
+    public object weapon_maxatk;
+    public object weapon_minatk;
+    public object weapon_spd;
+    public object weapon_special;
+    public object weapon_grade;
+    public object weapon_upgrade;
+    public object weapon_special_txt;
+    public object weapon_cost;
+    private object bottom_weaponicon;
+    public object wi;
+    private object extractseed;
+    private object mytransform;
+    private object cha1;
+    private object originscale;
+    private object finish_delay;
+    private object mytransform;
+    private object wingmesh;
+    private object delay;
+    private object myanimation;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object <_rate>__0;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object <_rate>__0;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object _pt;
+    private object $PC;
+    private object $current;
+    private object <$>_pt;
+    private object <>f__this;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object <comein>__0;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object <form>__0;
+    private object post;
+    private object <$s_7>__1;
+    private object <post_arg>__2;
+    private object url;
+    private object <www>__3;
+    private object <data>__4;
+    private object <querySuccess>__5;
+    private object <code>__6;
+    private object <id>__7;
+    private object <arr>__8;
+    private object <rankArray>__9;
+    private object <i>__10;
+    private object <haveUser>__11;
+    private object <username>__12;
+    private object <ownRanking>__13;
+    private object <gold>__14;
+    private object <jade>__15;
+    private object <haveReward>__16;
+    private object <len>__17;
+    private object $PC;
+    private object $current;
+    private object <$>post;
+    private object <$>url;
+    private object <>f__this;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object _url;
+    private object <www>__0;
+    private object _imagecount;
+    private object $PC;
+    private object $current;
+    private object <$>_url;
+    private object <$>_imagecount;
+    private object <>f__this;
+    private object $PC;
+    private object $current;
+    private object <$s_8>__0;
+    private object <C>__1;
+    private object <$s_9>__2;
+    private object <D>__3;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object <$s_12>__0;
+    private object <N>__1;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object <$s_13>__0;
+    private object <N>__1;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object <$s_16>__0;
+    private object <N>__1;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object <$s_17>__0;
+    private object <N>__1;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object _url;
+    private object <www>__0;
+    private object $PC;
+    private object $current;
+    private object <$>_url;
+    private object <>f__this;
+    private object _url;
+    private object <www>__0;
+    private object $PC;
+    private object $current;
+    private object <$>_url;
+    private object <>f__this;
+    private object <url>__0;
+    private object <www>__1;
+    private object <myprofile>__2;
+    private object <aa>__3;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object _url;
+    private object <www>__0;
+    private object $PC;
+    private object $current;
+    private object <$>_url;
+    private object <url>__0;
+    private object <www>__1;
+    private object <friendslist>__2;
+    private object <aa>__3;
+    private object <facebookid>__4;
+    private object <i>__5;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object _url;
+    private object <www>__0;
+    private object _index;
+    private object $PC;
+    private object $current;
+    private object <$>_url;
+    private object <$>_index;
+    private object <>f__this;
+    private object _url;
+    private object <www>__0;
+    private object _index;
+    private object $PC;
+    private object $current;
+    private object <$>_url;
+    private object <$>_index;
+    private object <>f__this;
+    private object $PC;
+    private object $current;
+    private object <>f__this;
+    private object _url;
+    private object <www>__0;
+    private object $PC;
+    private object $current;
+    private object <$>_url;
+    private object <>f__this;
+    private object _index;
+    private object $PC;
+    private object $current;
+    private object <$>_index;
+    private object <>f__this;
+    private static object $$field-0;
+    private static object $$field-1;
+    private static object $$field-2;
+    private static object $$field-3;
+    private static object $$field-4;
+    private static object $$field-5;
+    private static object $$field-6;
+    private static object $$field-7;
+    private static object $$field-8;
+    private static object $$field-9;
+    private static object $$field-10;
+    private static object $$field-11;
+    private static object $$field-12;
+    private static object $$field-13;
+    private static object $$field-14;
+    private static object $$field-15;
+    private static object $$field-16;
+    private static object $$field-17;
+    private static object $$field-18;
+    private static object $$field-19;
+    private static object $$field-20;
+    private static object $$field-21;
+    private static object $$field-22;
+    private static object $$field-23;
+    private static object $$field-24;
+    private static object $$field-25;
+    private static object $$field-26;
+    private static object $$field-27;
+    private static object $$field-28;
+    private static object $$field-29;
+    private object aNode;
+
+    public CommonUtils() {
+    IL_0000: ldarg.0
+    IL_0005: call 0x0A000065
+    IL_0006: ret
+    }
+
+    static CommonUtils() {
+    IL_0004: newobj 0x0A0002AB
+    IL_0009: stsfld 0x04000A26
+    IL_000A: ret
+    }
+
+    public static void IsNumeric() {
+    IL_0004: ldstr 0x70023063
+    IL_0009: newobj 0x0A0002AC
+    IL_000A: stloc.0
+    IL_000B: ldloc.0
+    IL_000C: ldarg.0
+    IL_000D: conv.r8
+    IL_000E: IL_AD
+    IL_000F: ldarg.0
+    IL_0010: nop
+    IL_0011: stloc.0
+    IL_0012: ret
+    }
+
+    public static void GetFileData() {
+    IL_0000: ldarg.0
+    IL_0001: ldc.i4.3
+    IL_0006: newobj 0x0A0002AE
+    IL_0007: stloc.0
+    IL_0008: ldloc.0
+    IL_0009: conv.r8
+    IL_000A: IL_AF
+    IL_000B: ldarg.0
+    IL_000C: nop
+    IL_000D: stloc.0
+    IL_000E: IL_D4
+    IL_0013: newarr 0x01000083
+    IL_0014: stloc.1
+    IL_0015: ldloc.0
+    IL_0016: ldloc.1
+    IL_0017: ldc.i4.0
+    IL_0018: ldloc.1
+    IL_0019: len
+    IL_001A: not
+    IL_001B: conv.r8
+    IL_001C: IL_B0
+    IL_001D: ldarg.0
+    IL_001E: nop
+    IL_001F: stloc.0
+    IL_0020: pop
+    IL_0021: ldloc.0
+    IL_0022: conv.r8
+    IL_0023: xor
+    IL_0024: IL_01
+    IL_0025: nop
+    IL_0026: stloc.0
+    IL_0027: ldloc.1
+    IL_0028: ret
+    }
+
+    public static void IsEmpty() {
+    IL_0000: ldarg.0
+    IL_0005: call 0x0A00020C
+    IL_0006: stloc.1
+    IL_0007: IL_DD
+    IL_0008: ldc.i4.7
+    IL_0009: nop
+    IL_000A: nop
+    IL_000B: nop
+    IL_000C: IL_DD
+    IL_000D: ldc.i4.2
+    IL_000E: nop
+    IL_000F: nop
+    IL_0010: nop
+    IL_0011: stloc.0
+    IL_0012: ldloc.0
+    IL_0013: conv.r8
+    IL_0014: shl
+    IL_0015: IL_01
+    IL_0016: nop
+    IL_0017: stloc.0
+    IL_001C: call 0x0A0002B1
+    IL_001D: ldc.i4.1
+    IL_001E: stloc.1
+    IL_001F: IL_DD
+    IL_0020: ldarg.3
+    IL_0021: nop
+    IL_0022: nop
+    IL_0023: nop
+    IL_0024: IL_DD
+    IL_0025: nop
+    IL_0026: nop
+    IL_0027: nop
+    IL_0028: nop
+    IL_0029: ldloc.1
+    IL_002A: ret
+    }
+
+    public static void ToString() {
+    IL_0000: ldarg.0
+    IL_0001: ldarg.1
+    IL_0006: call 0x0A0002B2
+    IL_0007: ret
+    }
+
+    public static void EqualsIgnoreCase() {
+    IL_0000: ldarg.0
+    IL_0005: brfalse IL_000C
+    IL_0006: ldarg.1
+    IL_000B: brtrue IL_000E
+    IL_000C: ldc.i4.0
+    IL_000D: ret
+    IL_000E: ldarg.0
+    IL_000F: conv.r8
+    IL_0010: conv.ovf.i4.un
+    IL_0011: ldarg.0
+    IL_0012: nop
+    IL_0013: stloc.0
+    IL_0014: ldarg.1
+    IL_0015: conv.r8
+    IL_0016: conv.ovf.i4.un
+    IL_0017: ldarg.0
+    IL_0018: nop
+    IL_0019: stloc.0
+    IL_001A: conv.r8
+    IL_001B: IL_B4
+    IL_001C: ldarg.0
+    IL_001D: nop
+    IL_001E: stloc.0
+    IL_001F: ret
+    }
+
+    public static void ParseInt16() {
+    IL_0000: ldarg.0
+    IL_0005: call 0x06000579
+    IL_000A: brfalse IL_000D
+    IL_000B: ldc.i4.0
+    IL_000C: ret
+    IL_000D: ldc.i4.0
+    IL_000E: stloc.0
+    IL_000F: ldarg.0
+    IL_0014: ldc.i4 515
+    IL_0019: call 0x0A000215
+    IL_001A: stloc.0
+    IL_001B: IL_DD
+    IL_001C: ldloc.0
+    IL_001D: nop
+    IL_001E: nop
+    IL_001F: nop
+    IL_0020: pop
+    IL_0021: IL_DD
+    IL_0022: nop
+    IL_0023: nop
+    IL_0024: nop
+    IL_0025: nop
+    IL_0026: ldloc.0
+    IL_0027: ret
+    }
+
+    public static void ParseInt() {
+    IL_0000: ldarg.0
+    IL_0005: call 0x06000579
+    IL_000A: brfalse IL_000D
+    IL_000B: ldc.i4.0
+    IL_000C: ret
+    IL_000D: ldarg.0
+    IL_0012: call 0x0A00009E
+    IL_0013: ret
+    }
+
+    public static void ParseBool() {
+    IL_0000: ldarg.0
+    IL_0005: ldstr 0x70023085
+    IL_000A: call 0x0A0000EC
+    IL_000B: ret
+    }
+
+    public static void ParseFloat() {
+    IL_0000: ldarg.0
+    IL_0005: call 0x06000579
+    IL_000A: brfalse IL_0011
+    IL_000B: IL_22
+    IL_000C: nop
+    IL_000D: nop
+    IL_000E: nop
+    IL_000F: nop
+    IL_0010: ret
+    IL_0011: ldarg.0
+    IL_0016: call 0x0A0002B5
+    IL_0017: ret
+    }
+
+    public static void GetVal() {
+    IL_0001: ldloca.s 6
+    IL_0008: constrained 0x1B00001C
+    IL_0009: ldloc.0
+    IL_000E: newobj 0x1B00001C
+    IL_000F: stloc.0
+    IL_0010: ldarg.0
+    IL_0015: brfalse IL_00D1
+    IL_0016: ldarg.0
+    IL_0017: ldarg.1
+    IL_0018: conv.r8
+    IL_0019: IL_B6
+    IL_001A: ldarg.0
+    IL_001B: nop
+    IL_001C: stloc.0
+    IL_0021: brfalse IL_00D1
+    IL_0022: ldarg.0
+    IL_0023: ldarg.1
+    IL_0024: conv.r8
+    IL_0025: IL_B7
+    IL_0026: ldarg.0
+    IL_0027: nop
+    IL_0028: stloc.0
+    IL_0029: stloc.1
+    IL_002A: ldloc.1
+    IL_002F: brfalse IL_00D1
+    IL_0030: ldloc.1
+    IL_0031: conv.r8
+    IL_0032: IL_B8
+    IL_0033: ldarg.0
+    IL_0034: nop
+    IL_0035: stloc.0
+    IL_0036: stloc.2
+    IL_0037: IL_22
+    IL_0038: nop
+    IL_0039: nop
+    IL_003E: stsfld 0x13170D3F
+    IL_003F: ldarg.2
+    IL_0041: ldloca.s 4
+    IL_0046: call 0x0A0002B9
+    IL_0048: stloc.s 5
+    IL_0049: ldloc.0
+    IL_004E: brfalse IL_00CF
+    IL_004F: ldloc.2
+    IL_0054: call 0x0A00020C
+    IL_0059: brtrue IL_00CF
+    IL_005A: ldloc.0
+    IL_005B: conv.u8
+    IL_005C: stloc.1
+    IL_005D: nop
+    IL_005E: nop
+    IL_005F: IL_01
+    IL_0064: brfalse IL_0076
+    IL_0065: ldloc.2
+    IL_006A: call 0x0600057D
+    IL_006F: newobj 0x0100000B
+    IL_0070: stloc.0
+    IL_0075: br IL_00CA
+    IL_0076: ldloc.0
+    IL_0077: conv.u8
+    IL_0079: bge.s IL_007A
+    IL_007A: nop
+    IL_007B: IL_01
+    IL_0080: brfalse IL_0092
+    IL_0081: ldloc.2
+    IL_0086: call 0x0A0002B5
+    IL_008B: newobj 0x0100002F
+    IL_008C: stloc.0
+    IL_0091: br IL_00CA
+    IL_0092: ldloc.0
+    IL_0093: conv.u8
+    IL_0095: stloc.s 0
+    IL_0096: nop
+    IL_0097: IL_01
+    IL_009C: brfalse IL_00B3
+    IL_009D: ldloc.2
+    IL_00A2: ldstr 0x70023089
+    IL_00A7: call 0x0A0000EC
+    IL_00AC: newobj 0x01000013
+    IL_00AD: stloc.0
+    IL_00B2: br IL_00CA
+    IL_00B3: ldloc.0
+    IL_00B4: conv.u8
+    IL_00B5: shr
+    IL_00B6: nop
+    IL_00B7: nop
+    IL_00B8: IL_01
+    IL_00BD: brfalse IL_00CA
+    IL_00BE: ldloc.2
+    IL_00C3: call 0x0A0002BA
+    IL_00C8: newobj 0x01000066
+    IL_00C9: stloc.0
+    IL_00CE: br IL_00D1
+    IL_00CF: ldloc.1
+    IL_00D0: stloc.0
+    IL_00D1: ldloc.0
+    IL_00D6: castclass 0x1B00001C
+    IL_00D7: ret
+    }
+
+    }}
