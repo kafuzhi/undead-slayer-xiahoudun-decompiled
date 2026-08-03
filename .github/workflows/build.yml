@@ -1,10 +1,10 @@
-name: Auto Build ARM64
+name: Build Android ARM64
 
 on:
   workflow_dispatch:
 
 jobs:
-  activate-and-build:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -15,35 +15,58 @@ jobs:
         sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/share/boost "$AGENT_TOOLSDIRECTORY"
         df -h
 
-    - name: Request activation file
-      id: activation
-      uses: game-ci/unity-request-activation-file@v2
-      with:
-        unityVersion: 2022.3.20f1
+    - name: Setup Unity Project
+      run: |
+        mkdir -p Assets/Scripts
+        mkdir -p Assets/Plugins/Android/arm64-v8a
+        mkdir -p Assets/Plugins/Android/armeabi-v7a
+        mkdir -p Assets/Resources
+        mkdir -p Assets/Scenes
+        mkdir -p ProjectSettings
+        
+        # Copy scripts
+        if [ -d "Assets/Scripts" ]; then
+          echo "Scripts found: $(ls Assets/Scripts/*.cs 2>/dev/null | wc -l)"
+        fi
+        
+        # Copy native libs
+        if [ -d "lib/armeabi-v7a" ]; then
+          cp lib/armeabi-v7a/*.so Assets/Plugins/Android/armeabi-v7a/
+          echo "Copied native libs"
+        fi
+        
+        # Create ProjectSettings if missing
+        if [ ! -f "ProjectSettings/ProjectSettings.asset" ]; then
+          cat > ProjectSettings/ProjectSettings.asset << 'EOF'
+        %YAML 1.1
+        %TAG !u! tag:unity3d.com,2011:
+        --- !u!129 &1
+        PlayerSettings:
+          productName: Undead Slayer Xiahoudun
+          companyName: NHN Corp
+          defaultScreenWidth: 1920
+          defaultScreenHeight: 1080
+          bundleVersion: 3.5.0
+          AndroidBundleVersionCode: 1
+          AndroidMinSdkVersion: 22
+          AndroidTargetSdkVersion: 33
+          AndroidTargetArchitectures: 3
+          applicationIdentifier:
+            Android: com.nhncorp.skundeadck
+        EOF
+        fi
 
-    - name: Upload .alf file
-      uses: actions/upload-artifact@v4
-      with:
-        name: unity-activation-file
-        path: ${{ steps.activation.outputs.filePath }}
-
-    - name: Activate Unity (Personal)
-      if: ${{ secrets.UNITY_LICENSE != '' }}
-      uses: game-ci/unity-activate@v2
-      with:
-        unityVersion: 2022.3.20f1
-
-    - name: Build Android ARM64
-      if: ${{ secrets.UNITY_LICENSE != '' }}
+    - name: Build Android APK
       uses: game-ci/unity-builder@v4
       env:
         UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+        UNITY_PASSWORD: *** secrets.UNITY_PASSWORD }}
       with:
         targetPlatform: Android
         unityVersion: 2022.3.20f1
 
     - name: Upload APK
-      if: ${{ secrets.UNITY_LICENSE != '' }}
       uses: actions/upload-artifact@v4
       with:
         name: UndeadSlayer-arm64
