@@ -9,36 +9,15 @@ jobs:
     steps:
     - name: Generate .alf file using Docker
       run: |
-        # Try different image tags
-        IMAGE=""
-        for tag in \
-          "unityci/editor:ubuntu-2022.3.20f1-android-3" \
-          "unityci/editor:ubuntu-2022.3.20f1-android" \
-          "unityci/editor:ubuntu-2022.3.20f1-base-3" \
-          "unityci/editor:ubuntu-2022.3.20f1-base" \
-          "ghcr.io/game-ci/editor:2022.3.20f1-android-3" \
-          "ghcr.io/game-ci/editor:2022.3.20f1-android" \
-          "ghcr.io/game-ci/editor:2022.3.20f1-base-3" \
-          "ghcr.io/game-ci/editor:2022.3.20f1-base"; do
-          echo "Trying $tag..."
-          if docker pull "$tag" 2>&1; then
-            echo "SUCCESS: $tag"
-            IMAGE="$tag"
-            break
-          fi
-        done
-        
-        if [ -z "$IMAGE" ]; then
-          echo "ERROR: No Unity Docker image found"
-          exit 1
-        fi
+        # Pull Unity Docker image
+        docker pull unityci/editor:ubuntu-2022.3.20f1-android-3
         
         # Run activation in Docker
         docker run --rm \
           -v $(pwd):/output \
           -w /output \
-          "$IMAGE" \
-          bash -c "unity -batchmode -nographics -createManualActivationFile -logFile /dev/stdout 2>&1 || true; find /output -name '*.alf' -ls"
+          unityci/editor:ubuntu-2022.3.20f1-android-3 \
+          bash -c "/opt/unity/Editor/Unity -batchmode -nographics -createManualActivationFile -logFile /dev/stdout 2>&1 || true; echo '---'; find /output -name '*.alf' -ls; find /root -name '*.alf' -ls; find /tmp -name '*.alf' -ls; find /opt -name '*.alf' -ls"
         
         # Find the .alf file
         echo "Looking for .alf files..."
